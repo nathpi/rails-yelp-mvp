@@ -1,0 +1,13 @@
+<div class="container my-5 w-30">
+  <h1 class="mb-4">These are your Restaurants</h1>
+  <%# <%= link_to 'Add a restaurant', restaurants_new_path, class: 'btn btn-dark my-3' %>
+
+   <ul class="list-group">
+    <% @restaurants.each do |restaurant| %>
+      <li class="list-group-item">
+        <%= link_to restaurant.name, restaurant_path(restaurant), class: 'text-decoration-none' %> -
+        <%= restaurant.category %>
+      </li>
+    <% end %>
+  </ul>
+</div>
